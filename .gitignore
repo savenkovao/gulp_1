@@ -2,3 +2,5 @@
 app/public/
 app/resources/node_modules/
 app/resources/bower_components/
+app/resources/src/css/
+app/resources/src/js/index.min.js
