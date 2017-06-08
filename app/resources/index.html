@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DigitalSupport</title>
+
+
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+
+
+    <link href="src/css/index.min.css" rel="stylesheet">
+>
+  </head>
+  <body>
+
+    <div class="header-bg">
+      <div class="container">
+        <header class="clearfix">
+          <div class="hdr-logo">
+            <a href="#">
+              <img src="src/img/dsg/logo.png" alt="DigitalSupport-logo" class="hdr-logo__img">
+              <span class="hdr-logo__txt">DigitalSupport.tech</span>
+            </a>
+          </div>
+        
+          <div class="hdr-order">
+            <img src="src/img/dsg/ph-icon.png" alt="Phone" class="hdr-order__img">
+            <div class="hdr-order__txt-cont">
+              <p class="hdr-order__txt">Order by Phone</p>
+              <p>
+                <a class="hdr-order__tel" href="tel:8002896154">800-289-6154</a>
+              </p>                  
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <div class="container">
+      <section class="content clearfix">
+          
+        <div class="col-xs-12 col-sm-6">
+          <div class="row">
+            <form action="#" class="form">   
+              <div class="billing pad-right-2">
+                <div class="heading">
+                  <h2 class="block-hdr">Billing Information</h2>
+                </div>                           
+
+                <div class="billing-inputs clearfix">
+                        
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                      <div class="row pad-right-2">
+                       
+                        <label for="firstName">
+                          <span class="billing__name">First Name</span>
+                        </label>
+                        
+                        <input id="firstName" type="text" class="form-control billing__field" required>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                      <div class="row pad-left-2">
+                        <label for="lastName">                                  
+                          <span class="billing__name">Last Name</span>
+                        </label>
+
+                        <input id="lastName" type="text" class="form-control billing__field" required>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <label for="email">
+                          <span class="billing__name">Email Address</span>
+                        </label>
+
+                        <input id="email" type="email" class="form-control billing__field" required>
+
+                      </div>
+                    </div>
+                  </div>                                   
+
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <label for="reEmail">
+                          <span class="billing__name">Re-type Email Address</span>
+                        </label>
+                        
+                        <input id="reEmail" type="email" class="form-control billing__field" required>
+                      </div>
+                    </div>
+                  </div>                                   
+
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                      <div class="row">
+                        <label for="phoneNumber" class="">
+                          <span class="billing__name">Phone <i class="help"></i></span>
+                        </label>
+
+                        <input id="phoneNumber" type="text" class="form-control billing__field" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>     
+              <div class="credit">
+                <div class="heading">
+                  <h2 class="block-hdr">Credit Card Information</h2>
+                  <ul class="cards">
+                    <li class="visa"></li>
+                    <li class="master"></li>
+                    <li class="american"></li>
+                    <li class="jcb"></li>
+                  </ul>
+                </div>
+                
+                <div class="credit-inputs clearfix">
+                  
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <div class="row">
+
+                        <label for="cardNumber">
+                          <span class="credit__name">Card Number</span>
+                        </label>
+                          <input id="cardNumber" type="text" class="form-control credit__field" required>
+                      </div>                   
+                    </div>
+                  </div>
+                        
+                  <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                      <div class="row pad-right-3">
+
+                        <label for="expMonth">
+                          <span class="credit__name">Exp Month</span>
+                        </label>
+
+                        <select id="expMonth" class="form-control credit__select select-arrow" name="month">
+                          <option></option>
+                          <option>Item</option>
+                          <option>Item</option>
+                        </select>
+
+                      </div>
+                    </div>                   
+                  </div>
+
+                  <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                      <div class="row pad-left-3 pad-right-3">
+
+                        <label for="expYear">
+                          <span class="credit__name">Exp Year</span>
+                        </label>
+
+                        <select id="expYear" class="form-control credit__select select-arrow" name="year">
+                          <option></option>
+                          <option>Item</option>
+                          <option>Item</option>
+                        </select>
+                        
+                      </div>
+                    </div>                   
+                  </div>
+
+                  <div class="col-xs-12 col-sm-4">
+                    <div class="form-group">
+                      <div class="row pad-left-3">
+
+                        <label for="securityCode">
+                          <span class="credit__name">Security Code <i class="help"></i></span>
+                        </label>
+                          <input id="securityCode" type="password" class="form-control credit__field" required>
+                      </div>                   
+                    </div>
+                  </div>
+                        
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                      <div class="row pad-right-2">
+
+                        <label for="country">
+                          <span class="credit__name">Country</span>
+                        </label>
+
+                        <select id="country" class="form-control credit__select select-arrow" name="country">
+                          <option></option>
+                          <option>Item</option>
+                          <option>Item</option>
+                        </select>
+                        
+                      </div>
+                    </div>                   
+                  </div>
+                        
+                  <div class="col-xs-12 col-sm-6">
+                    <div class="form-group">
+                      <div class="row pad-left-2">
+
+                        <label for="zip">
+                          <span class="credit__name">Zip</span>
+                        </label>
+                          <input id="zip" type="text" class="form-control credit__field" required>
+                      </div>                   
+                    </div>
+                  </div>
+                </div>
+              </div>
+                        
+              <div class="copyright">
+                <p class="copyright__text">
+                  All products are protected by a 30 day money back guarantee. By submitting this order, you agree that you are signing up for a subscription product that will be billed in monthly intervals. Continued use of the service is contingent upon your payment of the subscription. Details about the price and frequency of the billing were shown above.
+                </p>
+              </div> 
+                        
+              <div class="form-submit-cont">
+                <button class="form-submit-btn" onsubmit="return false">Submit Order</button> 
+              </div>
+            </form> 
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <div class="row">
+
+            <div class="pad-left-2">
+
+              <div class="basket">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th class="text-right" colspan="3">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i class="tool"></i>
+                      </td>
+                      <td class="th-pad-right">
+                        One-time Setup Fee
+                      </td>
+                      <td class="text-right">$99</td>
+                    </tr>
+                          
+                    <tr> 
+                        <td>
+                          <i class="call-person"></i>                            
+                        </td>
+
+                        <td class="th-pad-right">
+                           Digital Support Monthly
+                        </td>
+                      
+                      <td class="text-right">$19.99/month</td>
+                    </tr>
+                          
+                    <tr>
+                      <td></td>
+                      <td class="total text-right" colspan="3>
+                        <span class="total-txt">Total:</span>
+                        <span class="total-val">$119.99</span>                         
+                      </td>
+                    </tr>
+                          
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="antiv-check">
+                <img src="src/img/dsg/pci.png" alt="PCI" class="antiv-check__img">
+                <img src="src/img/dsg/mcafee.png" alt="McAfee" class="antiv-check__img">
+                <img src="src/img/dsg/norton.png" alt="Nortin" class="antiv-check__img">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+
+    <div class="footer-bg">
+      <div class="container">
+        <div class="row">
+          <footer>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="src/js/index.min.js"></script>
+  </body>
+</html>

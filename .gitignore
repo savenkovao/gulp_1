@@ -1,0 +1,4 @@
+.idea/
+app/public/
+app/resources/node_modules/
+app/resources/bower_components/
