@@ -13,6 +13,7 @@ var concat 			= require('gulp-concat');
 var copy            = require('gulp-contrib-copy');
 
 //images
+var imageResize     = require('gulp-image-resize');
 var imagemin        = require('gulp-imagemin');
 var cache           = require('gulp-cache');
 
@@ -101,6 +102,22 @@ gulp.task('bower', function() {
         .pipe(gulp.dest(PUBLIC_DIR+'bower_components'));
 });
 
+//
+// //
+// gulp.task('img:resize', function () {
+//     return gulp.src('src/img/*.*')
+//         .pipe(imageResize(
+//             {
+//                 width : 100,
+//                 height : 100,
+//                 crop : true,
+//                 upscale : false,
+//                 imageMagick: true
+//             }
+//         ))
+//         .pipe(gulp.dest(PUBLIC_DIR));
+// });
+
 // optimization & copying img to public
 
 gulp.task('img', function() {
@@ -130,6 +147,7 @@ gulp.task(
 
         runSequence(
             'clean:cache',
+            // 'img:resize',
             [
                 'browserSync',
                 'less',
@@ -169,4 +187,3 @@ gulp.task(
         );
     }
 );
-
