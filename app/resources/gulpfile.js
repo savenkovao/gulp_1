@@ -1,4 +1,5 @@
 var gulp            = require('gulp');
+
 //less-css
 var browserSync     = require('browser-sync');
 var less            = require('gulp-less');
@@ -39,7 +40,7 @@ var path = {
 
 //dev
 
-//Поднятие сервера
+//Поднятие сервера dev
 
 gulp.task('browserSync', function () {
    browserSync({
@@ -49,7 +50,7 @@ gulp.task('browserSync', function () {
    });
 });
 
-
+// less compile 
 gulp.task('less', function(){
     return gulp.src(path.less)
 
@@ -64,6 +65,7 @@ gulp.task('less', function(){
         }));
 });
 
+// js concatenation, minification 
 gulp.task('scripts', function(){
     return gulp.src(['!src/js/index.min.js', path.scripts])
         .pipe(concat('index.min.js'))
@@ -75,11 +77,15 @@ gulp.task('scripts', function(){
         }));
 });
 
+// copying html to public
+
 gulp.task('html', function() {
     return gulp.src('./index.html')
         .pipe(copy())
         .pipe(gulp.dest(PUBLIC_DIR));
 });
+
+// copying fonts to public
 
 gulp.task('fonts', function() {
     return gulp.src(path.fonts)
@@ -87,11 +93,15 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest(PUBLIC_DIR+'src/fonts'));
 });
 
+// copying bower libs to public
+
 gulp.task('bower', function() {
     return gulp.src('bower_components/**/*.*')
         .pipe(copy())
         .pipe(gulp.dest(PUBLIC_DIR+'bower_components'));
 });
+
+// optimization & copying img to public
 
 gulp.task('img', function() {
     return gulp.src(path.img)
@@ -99,17 +109,20 @@ gulp.task('img', function() {
         .pipe(gulp.dest(PUBLIC_DIR+'src/img'));
 });
 
+// deleting folder/files from public
+
 gulp.task('clean:public', function(){
     clear(['./../public/**/*'],{force: true});
 });
+
+// cache clearing
 
 gulp.task('clean:cache', function(done){
     return cache.clearAll(done);
 });
 
 
-
-// Watchers
+// dev
 gulp.task(
     'default',
 
@@ -125,12 +138,16 @@ gulp.task(
             callback
         );
 
+// watchers
         gulp.watch(path.less, ['less']);
         gulp.watch(path.scripts, ['scripts']);
         gulp.watch('*.html', browserSync.reload);
     }
 );
 
+
+
+// prod
 gulp.task(
     'build',
 
