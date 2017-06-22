@@ -19,7 +19,6 @@ var cache           = require('gulp-cache');
 
 //cleaning
 var clear           = require('del');
-var cache           = require('gulp-cache');
 
 //Sequence
 var runSequence = require('run-sequence');
@@ -49,6 +48,12 @@ gulp.task('browserSync', function () {
            baseDir: './'
        }
    });
+});
+
+gulp.task('less-copy', function(){
+    return gulp.src('src/less/**/*.less')
+        .pipe(copy())
+        .pipe(gulp.dest(PUBLIC_DIR  + 'src/less/'))
 });
 
 // less compile 
@@ -175,7 +180,7 @@ gulp.task(
             'clean:public',
             'clean:cache',
             [
-
+                'less-copy',
                 'less',
                 'scripts',
                 'fonts',
